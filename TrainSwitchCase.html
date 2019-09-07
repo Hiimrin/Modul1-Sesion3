@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<form>
+    <input id="inp" type="text" name="day">
+    <button id="cal" type="button" onclick="Tinh()" >Tinh so ngay </button>
+</form>
+<script>
+
+function Tinh() {
+    let mont = document.getElementById("inp").value;
+    let ketqua = "Thang" + mont + "co 31 ngay ";
+    let ketqua1 = "Thang" + mont + "Co 30 ngay";
+    let ketqua2 = "Thang" + mont + " Co 28 hoac 29 ngay";
+    if (
+        (mont == 1) ||
+        (mont == 3) ||
+        (mont == 5) ||
+        (mont == 7) ||
+        (mont == 8) ||
+        (mont == 10)||
+        (mont == 12)){
+        document.getElementById("cal").innerHTML = ketqua;
+    }else if (
+        (mont == 4) ||
+        (mont == 6) ||
+        (mont == 9) ||
+        (mont == 11)){
+        document.getElementById("cal").innerHTML = ketqua1;
+    }else if (mont = 2 ){
+        document.getElementById("cal").innerHTML = ketqua2;
+    }
+}
+</script>
+</body>
+</html>
